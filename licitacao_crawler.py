@@ -17,7 +17,7 @@ regex_data_abertura = r'<th[^>]*>\s*Data\s+Abertura\s*</th>[^<]*<td[^>]*>(?P<val
 
 dados_licitacoes = {'licitacoes': []}
 
-for indice in range(1, 10):
+for indice in range(1, 15):
     headers = {
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
         'Accept-Language': 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7',
@@ -76,4 +76,4 @@ for indice in range(1, 10):
 
 
 with open('out.json', 'w', encoding='iso-8859-1') as arq:
-    arq.write(json.dumps(dados_licitacoes, ensure_ascii=False))
+    arq.write(str(dados_licitacoes))
